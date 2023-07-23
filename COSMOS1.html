@@ -9,10 +9,30 @@
         
 body{
     background-image: url(https://www.nawpic.com/media/2020/space-4k-nawpic-10.jpg);
-    margin: 10px;
+    margin: 0;
+    transition: 1s;
     text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: 20s;
+    cursor: none;
+    background-attachment: fixed;
      }
-
+  #cursor{
+    width: 50px;
+    height: 50px;
+    cursor: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    pointer-events:none;
+    z-index: 100;
+    border: 5px midnightblue solid;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+  }
+  #a{
+    cursor: none;
+  }
   select:hover{
       cursor: pointer;
       background-color: rgb(0, 0, 0);
@@ -23,6 +43,9 @@ body{
       border-radius: 20px;
    }
  
+   a{
+    transition: 2s;
+   }
     #jam{
       border-radius: 50%;
     }
@@ -52,18 +75,15 @@ body{
          font-family: 'Courier New', Courier, monospace;
          font-weight: bold;
      }
-
       fieldset button:hover{
         cursor: pointer;
         background-color: black;
         color: aqua;
       }
-
      h3{
         color: white;
         font-family: 'Courier New', Courier, monospace;
      }
-
      #yummy:hover{
      cursor: pointer;
      background-color: black;
@@ -71,8 +91,7 @@ body{
      list-style: none;
      list-style-type: none;
      list-style-position: outside;
-     }
-       
+     } 
      img{
         border-radius: 20px;
         margin: 15px;
@@ -86,11 +105,9 @@ body{
       font-size: 40px;
       text-align: center;
      }
-
      h1{
       font-family: 'Courier New', Courier, monospace;
      }
-
      #gut{
       border-radius: 20px;
       background-color: aqua;
@@ -112,7 +129,11 @@ body{
      }
              
         #warm{
-        position: fixed;
+          left: 0;
+          top: 50px;
+          display: grid;
+          text-align: right;
+        position: sticky;
         }
        form{
         text-align: right;
@@ -120,8 +141,8 @@ body{
          #mane{
           text-align:left;
           position: fixed;
-         }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-          #warm:hover{
+         }                 
+        #warm:hover{
             background-color: black;
             color: aqua;
             text-align: match-parent;
@@ -132,12 +153,38 @@ body{
             text-decoration: none;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             margin-top: 30px;
-            cursor:pointer;
           }
+        .lname a{
+        transition: 5s;
+         cursor: pointer;
+        }
+        a:hover{
+        transition: 1s;
+        border-bottom: 5px aliceblue solid;
+        animation: name linear 2s;
+        }
+        #loader{
+          position: fixed;
+          background: black url(reloader.gif) no-repeat center center;
+          width: 100%;
+          height: 100vh;
+          z-index: 1;
+        }
+        img{
+          width: 100%;
+          height: 5%;
+        }
+        iframe{
+          width: 100%;
+        }
+
     </style>
     <link rel="stylesheet" href="Cosmos.css">
 </head>
 <body>
+  <div id="cursor"></div>
+  <div id="loader"></div>
+    <div class="lname">
 <a href="#a">\\\QUYOSH SISTEMASI///</a><br>
 <a href="#b">SIZGA QAYSI SAYYORA YOQADI ?</a><br>
 <a href="#c">\\\ YER ATROFIDA AYLANADIGAN SAYYORA ///</a><br>
@@ -150,17 +197,12 @@ body{
 <a href="#j">\\\ KOSMIK KEMA ///</a><br>
 <a href="#k">\\\ QUYOSH ///</a><br>
 <a href="#l">\\\ FAKTLAR ///</a><br>
-  <img class="iconTempPartIcon-E1_1" src="https://assets.msn.com/weathermapdata/1/static/svg/72/v2/card_fix_partlysunny/PartlyCloudyDayV3.svg" title="Partly sunny">
-  <img class="iconTempPartIcon-E1_1" src="https://assets.msn.com/weathermapdata/1/static/svg/72/v2/card_fix_partlysunny/MostlySunnyDay.svg" title="Mostly sunny">
-  <img class="iconTempPartIcon-E1_1" src="https://assets.msn.com/weathermapdata/1/static/svg/72/v2/card_fix_partlysunny/MostlyClearNight.svg" title="Mostly clear">
-  <img class="iconTempPartIcon-E1_1" src="https://assets.msn.com/weathermapdata/1/static/svg/72/v2/card_fix_partlysunny/LightRainV3.svg" title="Light rain">
-  <img class="iconTempPartIcon-E1_1" src="https://assets.msn.com/weathermapdata/1/static/svg/72/v2/card_fix_partlysunny/SunnyDayV3.svg" title="Sunny"> 
-<img  src="https://assets.msn.com/weathermapdata/1/static/svg/72/v2/card_fix_partlysunny/ClearNightV3.svg">
+    </div>
+  
+      <a href="#a"><input type="submit" id="warm" value="TEPAGA"></a>
 <h1>KOSMOS</h1>
       <h2 id="a">\\\QUYOSH SISTEMASI///</h2>
-    <h3>Hamma quyosh sistemasini bilsa kerak chunki bizning yer quyosh sistemasida 3-bo'lib joylashga bo'lib faqat bizda hayot mavjud va quyosh sistemasida 8 ta sayyora bor bular "MERQURIY" <img src="https://img.freepik.com/free-vector/mercury-planet-space-background_1308-79886.jpg?w=2000" height="50px" width="50px">, "VENERA" <img src="https://grodno24.com/assets/images/venera_1.jpg" height="40px" width="55px">, "YER" <img src="https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?cs=srgb&dl=pexels-pixabay-87651.jpg&fm=jpg" height="50px" width="50px">, "MARS" <img src="https://cdn.mos.cms.futurecdn.net/kCbvedK262UGLXCLFeW5oS.jpg" height="40px" width="65px">, "YUPITER" <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Hubble_Ultraviolet_View_of_Jupiter.jpg/322px-Hubble_Ultraviolet_View_of_Jupiter.jpg" height="50px" width="55px">, "SATURN" <img src="https://img.freepik.com/premium-photo/saturn-planet-with-night-view-rising-sun-realistic-view-solar-system-3d-rendering_508524-249.jpg?w=2000" height="50px" width="50px">, "URAN" <img src="https://static.zarnews.uz/crop/a/2/720__80_a20946dbafc0d4223f598c63c255ce95.jpg?img=self&v=1588977760" height="40px" width="55px">, "NEPTUN" <img src="https://solarsystem.nasa.gov/system/feature_items/images/82_carousel_neptune_1.jpg" height="40px" width="55px"> lekin olimlar aniqlashicha "PLUTON" sayyoralig sifati yo'q ekan. Quyosh sistemasidagi eng katta sayyora bu "YUPITER" va eng kichigi "MERQURIY". </h3>
-    <form id="mane">
-      <input type="submit" id="warm" value="TEPAGA">
+    <h3>Hamma quyosh sistemasini bilsa kerak chunki bizning yer quyosh sistemasida 3-bo'lib joylashga bo'lib faqat bizda hayot mavjud va quyosh sistemasida 8 ta sayyora bor bular "MERQURIY" <img src="https://img.freepik.com/free-vector/mercury-planet-space-background_1308-79886.jpg?w=2000" height="50px" width="50px">, "VENERA" <img src="https://a-z-animals.com/media/2022/07/iStock-1199281415.jpg">, "YER" <img src="https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?cs=srgb&dl=pexels-pixabay-87651.jpg&fm=jpg" height="50px" width="50px">, "MARS" <img src="https://cdn.mos.cms.futurecdn.net/kCbvedK262UGLXCLFeW5oS.jpg" height="40px" width="65px">, "YUPITER" <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Hubble_Ultraviolet_View_of_Jupiter.jpg/322px-Hubble_Ultraviolet_View_of_Jupiter.jpg" height="50px" width="55px">, "SATURN" <img src="https://img.freepik.com/premium-photo/saturn-planet-with-night-view-rising-sun-realistic-view-solar-system-3d-rendering_508524-249.jpg?w=2000" height="50px" width="50px">, "URAN" <img src="https://static.zarnews.uz/crop/a/2/720__80_a20946dbafc0d4223f598c63c255ce95.jpg?img=self&v=1588977760" height="40px" width="55px">, "NEPTUN" <img src="https://solarsystem.nasa.gov/system/feature_items/images/82_carousel_neptune_1.jpg" height="40px" width="55px"> lekin olimlar aniqlashicha "PLUTON" sayyoralig sifati yo'q ekan. Quyosh sistemasidagi eng katta sayyora bu "YUPITER" va eng kichigi "MERQURIY". </h3>
       <br>   
       </form>
     <img src="https://img.freepik.com/free-vector/solar-system-background_1284-12725.jpg?w=2000" height="1000px" width="1200px">
@@ -289,7 +331,7 @@ body{
 <img src="https://spaceplace.nasa.gov/gallery-sun/en/solar-flare.en.jpg" height="700px" width="1200px">
 <hr>
 <h1 id="l">\\\ FAKTLAR ///</h1>
-<h3>Birinchi supermassiv qora tuynukni Amerika <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" height="40px" width="40px"> topgan.</h3>
+<h3>Birinchi supermassiv qora tuynukni Amerika <img src="https: //upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" height="40px" width="40px"> topgan.</h3>
 <iframe height="800px" width="1200px" src="https://www.youtube.com/embed/oEKDDgOur8I" title="SIRLI KOINOT HAQIDA AQL BOVAR QILMAS FAKTLARI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>SPACE</iframe>
 
 <hr>
@@ -301,35 +343,33 @@ body{
 <a href="C:\Users\Iskandar\Desktop\C A L C U L A T E R\CALCULATER.html" target="_blank"><button>YANA</button></a>
 <script>                                                                                                                                                                       
  function dar(){
-    bar.innerHTML = ` THANKS `
-    alert("DO YOU LIKE IT ?") 
+    const n = new SpeechSynthesisUtterance()
+    n.lang = "en"
+    n.text = "Do you like it?"
+    speechSynthesis.speak(n)
+    alert("Do you like it!!!!!")
+    bar.innerHTML = "Thanks for watching!!!!!!"
 }            
 
   function der(){
+    const n = new SpeechSynthesisUtterance()
+    n.lang = "en"
+    n.text = "Do you don't like it?"
+    speechSynthesis.speak(n)
     bar.innerHTML = ` OK `
-    alert("DO YOU DON'T LIKE IT ?")
-  }                                                                                                                                                                                                                                      
+    alert("DO YOU DON'T LIKE IT ????")
+  }     
+  window.addEventListener("load",()=>{
+    document.getElementById("loader").style.display = "none"
+  })                             
+  window.addEventListener("mousemove",(e)=>{
+    document.getElementById("cursor").style.top = e.pageY + "px";
+    document.getElementById("cursor").style.left = e.pageX + "px";
+  })                                                                                                                                                                                                    
 </script>  
 <br> 
 <hr height="80%">
-<h3>Birinchi marta qachon yerga asteroid tushgan ?</h3>
-<button onclick="ner()">Yaqinda</button>   
-<button onclick="ner1()">Avval</button>  
-<button onclick="ner2()">Dinozavrlar vaqtida</button>
-<div id="no"></div>
-<script>
-  function ner(){
-  no.innerHTML = ` NOTO'G'RI `
-  }  function ner1(){
-  no.innerHTML = ` NOTO'G'RI `
-  }   function ner2(){
-  no.innerHTML = ` TO'G'RI `
-  }
-</script>          
-<h3>
-  Asteroid nima ?
-</h3>            
-<input type="text" maxlength="30">                                                                                                                                                                                                             
-</div>
+
+<!-- <path d="M1152 704q0 185 -131.5 316.5t-316.5 131.5t-316.5 -131.5t-131.5 -316.5t131.5 -316.5t316.5 -131.5t316.5 131.5t131.5 316.5zM1664 -128q0 -52 -38 -90t-90 -38q-54 0 -90 38l-343 342q-179 -124 -399 -124q-143 0 -273.5 55.5t-225 150t-150 225t-55.5 273.5 t55.5 273.5t150 225t225 150t273.5 55.5t273.5 -55.5t225 -150t150 -225t55.5 -273.5q0 -220 -124 -399l343 -343q37 -37 37 -90z"></path> -->
 </body>
 </html>
